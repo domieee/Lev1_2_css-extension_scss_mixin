@@ -1,0 +1,25 @@
+@media screen and (max-width: 600px) {
+
+    body {
+
+        .section_images {
+            display: flex;
+            flex-flow: column wrap;
+        }
+
+        .section_text {
+            width: 70%;
+        }
+    }
+
+    .aside {
+    	display: flex;
+        align-items: center;
+    	flex-flow: row wrap;
+
+        .first_aside, .second_aside, .third_aside, .fourth_aside {
+            width: 70%;
+            margin: 0.5rem;
+        }
+	}
+}

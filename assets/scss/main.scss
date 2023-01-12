@@ -1,0 +1,108 @@
+@import 'variables.scss', 'mixin.scss', 'media.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    header {
+        padding: $margin-padding-fontsize-15rem;
+        height: 6rem;
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        h1, h2 {
+            font-size: $margin-padding-fontsize-1rem
+        }
+    }
+
+    .nav .nav_links {
+        margin-top: $margin-padding-fontsize-1rem;
+        display: flex;
+        justify-content: center;
+        margin-bottom: $margin-padding-fontsize-1rem;
+        background-color: $rgba-0-0-255-0--678;
+
+        li {
+            padding: $margin-padding-fontsize-1rem;
+            list-style: none;
+
+            a {
+                @include anchor-mixin;
+            }
+        }
+    }
+
+    .main {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+
+        .section_text {
+            text-align: center;
+        }
+        
+        .section_text, .section_images {
+            margin: $margin-padding-fontsize-1rem;
+        }
+
+        .section_images {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                height: 12rem;
+                width: 18rem;
+                margin: 0
+                        $margin-padding-fontsize-05rem
+                        $margin-padding-fontsize-1rem
+                        $margin-padding-fontsize-05rem;
+            }
+        }
+    }
+
+    .aside {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        margin: $margin-padding-fontsize-1rem;
+    }
+
+    .first_aside,
+    .second_aside,
+    .third_aside,
+    .fourth_aside {
+        border: 0.2rem solid rgba(0, 0, 255, 0.678);    
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer {
+        height: 5rem;
+        margin-top: 1rem;
+        background-color: rgba(0, 0, 255, 0.678);
+
+        .footer_links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+
+             li {
+                list-style:none;
+            
+                        
+                a {
+                    @include anchor-mixin;
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
